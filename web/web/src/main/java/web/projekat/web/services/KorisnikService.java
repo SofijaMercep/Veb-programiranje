@@ -32,4 +32,18 @@ public class KorisnikService {
         korisnikRepository.delete(korisnik);
     }
 
+    public Korisnik Registracija(Korisnik k){
+        Korisnik korisnik = new Korisnik();
+        korisnik.setKorisnicko_ime(k.getKorisnicko_ime());
+        korisnik.setLozinka(k.getLozinka());
+        korisnik.setIme(k.getIme());
+        korisnik.setPrezime(k.getPrezime());
+        korisnik.setPol(k.getPol());
+        korisnik.setDatum_rodjenja(k.getDatum_rodjenja());
+        korisnik.setUloga("KUPAC");
+        korisnikRepository.save(korisnik);
+        return k;
+
+    }
+
 }

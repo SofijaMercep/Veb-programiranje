@@ -37,10 +37,10 @@ public class Korisnik implements Serializable {
 
     public Korisnik(Long id, String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum_rodjenja, String uloga) {
         this.id = id;
-        this.korisnicko_ime = korisnicko_ime;
-        this.lozinka = lozinka;
         this.ime = ime;
         this.prezime = prezime;
+        this.korisnicko_ime = korisnicko_ime;
+        this.lozinka = lozinka;
         this.pol = pol;
         this.datum_rodjenja = datum_rodjenja;
         this.uloga = uloga;

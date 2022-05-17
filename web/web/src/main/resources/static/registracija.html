@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRACIJA</title>
+</head>
+<body>
+<div class="registration-form" id="registracija">
+    <h1>Registration form</h1>
+    <form id="form" name="form" th:action="@{/registracija}" th:object="${user}" method="post">
+        <p>Ime: </p>
+        <input type="text" name="ime" placeholder="Ime" id="ime" required th:field="*{ime}">
+        <p>Prezime: </p>
+        <input type="text" name="prezime" placeholder="Prezime" id="prezime" required th:field="*{prezime}">
+        <p>Korisnicko: </p>
+        <input type="text" name="korisnicko_ime" placeholder="Korisnicko ime" id="korisnicko_ime" required th:field="*{korisnicko_ime}">
+        <p>Sifra: </p>
+        <input type="password" name="lozinka" placeholder="Sifra" id="lozinka" required th:field="*{lozinka}">
+        <p>Pol: </p>
+        <input type="tel" name="pol" placeholder="Pol" id="pol" required th:field="*{pol}">
+        <p>Datum rodjenja: </p>
+        <input type="date" name="birthdate" placeholder="Datum rodjenja" id="datum_rodjenja" required th:field="*{datum_rodjenja}">
+        <button type="submit" id="btnRegistracija">Registration</button>
+    </form>
+</div>
+</body>
+</html>
