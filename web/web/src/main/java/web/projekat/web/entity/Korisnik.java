@@ -12,7 +12,7 @@ public class Korisnik implements Serializable {
     private Long id;
 
     @Column(unique = true)
-    private String korisnicko_ime;
+    private String kime;
 
     @Column
     private String lozinka;
@@ -27,7 +27,7 @@ public class Korisnik implements Serializable {
     private String pol;
 
     @Column
-    private String datum_rodjenja;
+    private String datum;
 
     @Column
     private String uloga;
@@ -35,14 +35,14 @@ public class Korisnik implements Serializable {
     public Korisnik() {
     }
 
-    public Korisnik(Long id, String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum_rodjenja, String uloga) {
+    public Korisnik(Long id, String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum, String uloga) {
         this.id = id;
         this.ime = ime;
         this.prezime = prezime;
-        this.korisnicko_ime = korisnicko_ime;
+        this.kime = korisnicko_ime;
         this.lozinka = lozinka;
         this.pol = pol;
-        this.datum_rodjenja = datum_rodjenja;
+        this.datum = datum;
         this.uloga = uloga;
     }
 
@@ -55,11 +55,11 @@ public class Korisnik implements Serializable {
     }
 
     public String getKorisnicko_ime() {
-        return korisnicko_ime;
+        return kime;
     }
 
     public void setKorisnicko_ime(String korisnicko_ime) {
-        this.korisnicko_ime = korisnicko_ime;
+        this.kime = korisnicko_ime;
     }
 
     public String getLozinka() {
@@ -94,12 +94,12 @@ public class Korisnik implements Serializable {
         this.pol = pol;
     }
 
-    public String getDatum_rodjenja() {
-        return datum_rodjenja;
+    public String getDatum() {
+        return datum;
     }
 
-    public void setDatum_rodjenja(String datum_rodjenja) {
-        this.datum_rodjenja = datum_rodjenja;
+    public void setDatum(String datum_rodjenja) {
+        this.datum = datum_rodjenja;
     }
 
     public String getUloga() {

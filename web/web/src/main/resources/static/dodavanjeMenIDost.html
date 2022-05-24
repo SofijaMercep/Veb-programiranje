@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>REGISTRACIJA</title>
+    <title>DODAVANJE MENADZERA I DOSTAVLJACA</title>
 </head>
 <body>
-    <h1>Registracija</h1>
+    <h1>Registracija menadzera i dostavljaca</h1>
     <form id="form" name="form" th:action="@{/registracija}" th:object="${korisnik}" method="post">
         <p>Ime: </p>
         <input type="text" name="ime" placeholder="Ime" id="ime" required th:field="*{ime}">
@@ -19,6 +19,8 @@
         <input type="text" name="pol" placeholder="Pol" id="pol" required th:field="*{pol}">
         <p>Datum rodjenja: </p>
         <input type="text" name="datum" placeholder="Datum" id="datum" required th:field="*{datum}">
+        <p>Uloga: </p>
+        <input type="text" name="uloga" placeholder="Uloga" id="uloga" required th:field="*{uloga}">
         <button type="submit" id="btnRegistracija">Registration</button>
     </form>
 </body>
