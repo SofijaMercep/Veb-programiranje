@@ -14,6 +14,7 @@ public class DefaultController {
     public String registracijaGet(Model model) {
         Korisnik korisnik = new Korisnik();
         model.addAttribute("korisnik", korisnik);
+        
         return "registracija.html";
     }
 
