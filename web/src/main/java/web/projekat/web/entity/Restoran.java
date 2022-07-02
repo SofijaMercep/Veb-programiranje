@@ -42,8 +42,7 @@ public class Restoran {
     public Restoran() {
     }
 
-    public Restoran(Long id, String naziv, String tip,  Menadzer menadzer, Set<Artikal> artikli, Set<Porudzbina> porudzbine, Lokacija lokacija) {
-        this.id = id;
+    public Restoran( String naziv, String tip,  Menadzer menadzer, Set<Artikal> artikli, Set<Porudzbina> porudzbine, Lokacija lokacija) {
         this.naziv = naziv;
         this.tip = tip;
         this.menadzer = menadzer;
@@ -106,5 +105,18 @@ public class Restoran {
 
     public void setLokacija(Lokacija lokacija) {
         this.lokacija = lokacija;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Restoran{" +
+                "id=" + id +
+                ", naziv='" + naziv + '\'' +
+                ", tip='" + tip + '\'' +
+                ", lokacija=" + lokacija +
+                ", restoran=" + artikli +
+                ", porudzbina=" +  porudzbine +
+                '}';
     }
 }

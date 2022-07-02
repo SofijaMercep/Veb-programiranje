@@ -12,6 +12,9 @@ public class TipKupca implements Serializable {
     private Long id;
 
     @Column
+    private String ime;
+
+    @Column
     private double popust;
 
     @Column
@@ -23,11 +26,10 @@ public class TipKupca implements Serializable {
     public TipKupca() {
     }
 
-    public TipKupca(Long id, double popust, int trazeni_broj_bodova, Set<Kupac> kupci) {
-        this.id = id;
+    public TipKupca( String ime, double popust, int trazeni_broj_bodova) {
+        this.ime = ime;
         this.popust = popust;
         this.trazeni_broj_bodova = trazeni_broj_bodova;
-        this.kupci = kupci;
     }
 
 
@@ -61,5 +63,17 @@ public class TipKupca implements Serializable {
 
     public void setKupac(Kupac kupac) {
         this.kupci = kupci;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "TipKupca{" +
+                "id=" + id +
+                ", ime='" + ime + '\'' +
+                ", popust=" + popust +
+                ", trazeni_broj_bodova=" + trazeni_broj_bodova +
+                '}';
     }
 }

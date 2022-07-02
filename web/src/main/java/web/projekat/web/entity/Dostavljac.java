@@ -15,8 +15,8 @@ public class Dostavljac extends Korisnik{
     public Dostavljac() {
     }
 
-    public Dostavljac(Long id, String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum_rodjenja, String uloga) {
-        super(id, korisnicko_ime, lozinka, ime, prezime, pol, datum_rodjenja, uloga);
+    public Dostavljac( String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum_rodjenja, String uloga) {
+        super( korisnicko_ime, lozinka, ime, prezime, pol, datum_rodjenja, uloga);
     }
 
     public Set<Porudzbina> getPorudzbine() {
@@ -25,5 +25,12 @@ public class Dostavljac extends Korisnik{
 
     public void setPorudzbine(Set<Porudzbina> porudzbine) {
         this.porudzbine = porudzbine;
+    }
+
+    @Override
+    public String toString() {
+        return "Dostavljac{" + super.toString() +
+                "porudzbine=" + porudzbine +
+                '}';
     }
 }

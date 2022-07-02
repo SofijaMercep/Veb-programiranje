@@ -9,10 +9,10 @@ public class Lokacija {
     private Long id;
 
     @Column
-    private String geo_duzina;
+    private Double geo_duzina;
 
     @Column
-    private String geo_sirina;
+    private Double geo_sirina;
 
     @Column
     private String adresa;
@@ -23,12 +23,10 @@ public class Lokacija {
     public Lokacija() {
     }
 
-    public Lokacija(Long id, String geo_duzina, String geo_sirina, String adresa, Restoran restoran ) {
-        this.id = id;
+    public Lokacija( Double geo_duzina, Double geo_sirina, String adresa ) {
         this.geo_duzina = geo_duzina;
         this.geo_sirina = geo_sirina;
         this.adresa = adresa;
-        this.restoran = restoran;
     }
 
     public Long getId() {
@@ -39,19 +37,19 @@ public class Lokacija {
         this.id = id;
     }
 
-    public String getGeo_duzina() {
+    public Double getGeo_duzina() {
         return geo_duzina;
     }
 
-    public void setGeo_duzina(String geo_duzina) {
+    public void setGeo_duzina(Double geo_duzina) {
         this.geo_duzina = geo_duzina;
     }
 
-    public String getGeo_sirina() {
+    public Double getGeo_sirina() {
         return geo_sirina;
     }
 
-    public void setGeo_sirina(String geo_sirina) {
+    public void setGeo_sirina(Double geo_sirina) {
         this.geo_sirina = geo_sirina;
     }
 
@@ -70,4 +68,15 @@ public class Lokacija {
     public void setRestoran(Restoran restoran) {
         this.restoran = restoran;
     }
+
+    @Override
+    public String toString() {
+        return "Lokacija{" +
+                "id=" + id +
+                ", duzina=" + geo_duzina +
+                ", sirina=" + geo_sirina +
+                ", adresa='" + adresa + '\'' +
+                '}';
+    }
+
 }

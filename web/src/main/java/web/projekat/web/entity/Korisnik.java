@@ -2,6 +2,7 @@ package web.projekat.web.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -35,8 +36,7 @@ public class Korisnik implements Serializable {
     public Korisnik() {
     }
 
-    public Korisnik(Long id, String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum, String uloga) {
-        this.id = id;
+    public Korisnik( String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum, String uloga) {
         this.ime = ime;
         this.prezime = prezime;
         this.kime = korisnicko_ime;
@@ -108,5 +108,20 @@ public class Korisnik implements Serializable {
 
     public void setUloga(String uloga) {
         this.uloga = uloga;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Korisnik{" +
+                "id=" + id +
+                ", korisnicko_ime='" + kime + '\'' +
+                ", lozinka='" + lozinka + '\'' +
+                ", ime='" + ime + '\'' +
+                ", prezime='" + prezime + '\'' +
+                ", datum_rodjenja=" + datum +
+                ", pol='" + pol + '\'' +
+                ", uloga=" + uloga +
+                '}';
     }
 }

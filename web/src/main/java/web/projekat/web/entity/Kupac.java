@@ -22,8 +22,8 @@ public class Kupac extends Korisnik{
     public Kupac() {
     }
 
-    public Kupac(Long id, String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum_rodjenja, String uloga) {
-        super(id, korisnicko_ime, lozinka, ime, prezime, pol, datum_rodjenja, uloga);
+    public Kupac( String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum_rodjenja, String uloga) {
+        super( korisnicko_ime, lozinka, ime, prezime, pol, datum_rodjenja, uloga);
     }
 
     public Kupac(int bodovi, Set<Porudzbina> porudzbine, Set<Komentar> komentari, TipKupca tipKupca) {
@@ -33,8 +33,8 @@ public class Kupac extends Korisnik{
         this.tipKupca = tipKupca;
     }
 
-    public Kupac(Long id, String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum_rodjenja, String uloga, int bodovi, Set<Porudzbina> porudzbine, Komentar komentar, TipKupca tipKupca) {
-        super(id, korisnicko_ime, lozinka, ime, prezime, pol, datum_rodjenja, uloga);
+    public Kupac( String korisnicko_ime, String lozinka, String ime, String prezime, String pol, String datum_rodjenja, String uloga, int bodovi, Set<Porudzbina> porudzbine, Komentar komentar, TipKupca tipKupca) {
+        super(korisnicko_ime, lozinka, ime, prezime, pol, datum_rodjenja, uloga);
         this.bodovi = bodovi;
         this.porudzbine = porudzbine;
         this.komentari = komentari;
@@ -72,4 +72,8 @@ public class Kupac extends Korisnik{
     public void setTipKupca(TipKupca tipKupca) {
         this.tipKupca = tipKupca;
     }
+
+
+
+
 }
