@@ -19,6 +19,9 @@ public class Dostavljac extends Korisnik{
         super(id, korisnicko_ime, lozinka, ime, prezime, pol, datum_rodjenja, uloga);
     }
 
+    public Dostavljac(String username, String password, String ime, String prezime, String datumRodjenja, String pol, Uloga kupac) {
+    }
+
     public Set<Porudzbina> getPorudzbine() {
         return porudzbine;
     }

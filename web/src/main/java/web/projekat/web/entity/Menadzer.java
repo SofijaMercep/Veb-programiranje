@@ -25,6 +25,9 @@ public class Menadzer  extends Korisnik{
         this.restorani = restorani;
     }
 
+    public Menadzer(String username, String password, String ime, String prezime, String datumRodjenja, String pol, Uloga menadzer, Restoran restoran) {
+    }
+
     public Set<Restoran> getRestorani() {
         return restorani;
     }
@@ -32,4 +35,19 @@ public class Menadzer  extends Korisnik{
     public void setRestorani(Set<Restoran> restorani) {
         this.restorani = restorani;
     }
+<<<<<<< Updated upstream
+=======
+
+
+    @Override
+    public String toString() {
+        return "Menadzer{" + super.toString()+
+                "restoran=" + restorani +
+                '}';
+    }
+
+    public Object getKorisnickoIme() {
+        return null;
+    }
+>>>>>>> Stashed changes
 }

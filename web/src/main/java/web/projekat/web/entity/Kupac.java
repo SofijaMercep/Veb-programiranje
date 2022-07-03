@@ -41,6 +41,9 @@ public class Kupac extends Korisnik{
         this.tipKupca = tipKupca;
     }
 
+    public Kupac(String username, String password, String ime, String prezime, String datumRodjenja, String pol, Uloga kupac) {
+    }
+
     public int getBodovi() {
         return bodovi;
     }
