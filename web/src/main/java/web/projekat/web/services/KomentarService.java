@@ -31,4 +31,8 @@ public class KomentarService {
     {
         komentarRepository.delete(komentar);
     }
+
+    public List<Komentar> getOneById(Long id) {
+        return (List<Komentar>) komentarRepository.getOneById(id);
+    }
 }

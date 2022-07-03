@@ -10,14 +10,14 @@ public class DefaultController {
     @GetMapping(value = "")
     public String pocetna(){ return "index.html";}
 
-    @GetMapping("/registracija")
+    @GetMapping(value = "/registracija")
     public String registracijaGet(Model model) {
         Korisnik korisnik = new Korisnik();
         model.addAttribute("korisnik", korisnik);
         return "registracija.html";
     }
 
-    @GetMapping("/prijavljivanje")
+    @GetMapping(value = "/prijavljivanje")
     public String prijavljivanjeGet(Model model) {
         Korisnik korisnik = new Korisnik();
         model.addAttribute("korisnik", korisnik);

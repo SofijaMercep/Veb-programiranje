@@ -2,6 +2,7 @@ package web.projekat.web.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import web.projekat.web.entity.Lokacija;
 import web.projekat.web.entity.Restoran;
 import web.projekat.web.repository.RestoranRepository;
 
@@ -33,4 +34,20 @@ public class RestoranService {
         restoranRepository.delete(restoran);
     }
 
+
+    public Restoran getByNaziv (String naziv) {
+        return restoranRepository.getByNaziv(naziv);
+    }
+
+    public Restoran getByLokacija(Lokacija lokacija) {
+        return restoranRepository.getByLokacija(lokacija);
+    }
+
+
+    public Restoran findOne(Long id) {
+        return restoranRepository.getById(id);
+    }
+
+    public List<Restoran> findAll() { return restoranRepository.findAll();
+    }
 }
