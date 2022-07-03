@@ -35,8 +35,7 @@ public class Menadzer  extends Korisnik{
     public void setRestorani(Set<Restoran> restorani) {
         this.restorani = restorani;
     }
-<<<<<<< Updated upstream
-=======
+
 
 
     @Override
@@ -49,5 +48,5 @@ public class Menadzer  extends Korisnik{
     public Object getKorisnickoIme() {
         return null;
     }
->>>>>>> Stashed changes
+
 }
