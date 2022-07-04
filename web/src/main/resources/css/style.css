@@ -1,0 +1,11 @@
+body{
+    background-color: #313131;
+    align-content: centre;
+    vertical-align: centre;
+}
+
+.dugme{
+    color: #131313;
+    font-size: 24px;
+    display: block;
+}

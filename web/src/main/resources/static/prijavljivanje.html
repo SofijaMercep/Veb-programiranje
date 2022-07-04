@@ -8,7 +8,7 @@
 <h1>Prijavljivanje</h1>
 <form id="form" th:action="@{/prijavljivanje}" th:object="${korisnik}" method="post">
     <p>Korisnicko ime: </p>
-    <input type="text" id="kime" name="kime" placeholder="Korisnicko ime" id="kime" required th:field="*{kime}">
+    <input type="text" id="korisnicko_ime" name="korisnicko_ime" placeholder="Korisnicko ime" id="korisnicko_ime" required th:field="*{korisnicko_ime}">
     <p>Sifra: </p>
     <input type="password" id="lozinka" name="lozinka" placeholder="Sifra" id="lozinka" required th:field="*{lozinka}">
     <button type="submit" id="btnPrijavljivanje">Prijavljivanje</button>

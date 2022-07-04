@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>POCETNA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/homePage.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <a href="/registracija">REGISTRACIJA KORISNIKA</a>
-    <a href="/prijavljivanje">PRIJAVLJIVANJE KORISNIKA</a>
+<style>
+body{
+    background-color: #313131;
+    align-content: centre;
+    vertical-align: centre;
+}
+
+.container{
+    margin: auto;
+    width: 50%;
+    height: 300px;
+    margin-top: 300px;
+ }
+
+.dugme{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    display: block;
+}
+</style>
+    <div class="container">
+        <a class="dugme" href="/registracija">REGISTRACIJA KORISNIKA</a>
+        <a class="dugme" href="/prijavljivanje">PRIJAVLJIVANJE KORISNIKA</a>
+    </div>
+
 </body>
 </html>

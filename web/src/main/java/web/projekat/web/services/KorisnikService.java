@@ -26,6 +26,9 @@ public class KorisnikService {
     public Korisnik GetById(Long id) {
         return korisnikRepository.getOneById(id);
     }
+//    public Korisnik GetByKorisnickoIme(String kime) {
+//        return korisnikRepository.findAllByKime(kime);
+//    }
 
     public void Save(Korisnik korisnik) {
         korisnikRepository.save(korisnik);
