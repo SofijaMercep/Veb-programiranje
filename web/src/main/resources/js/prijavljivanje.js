@@ -11,7 +11,7 @@ $(document).on("submit", "#login", function (event) {
     console.log(newLogin);
     $.ajax({
         type: "POST",
-        url: "http://localhost:8080/api/login",
+        url: "http://localhost:8080/prijavljivanje",
         dataType: "json",
         contentType: "application/json",
         data: JSON.stringify(newLogin),
@@ -21,7 +21,7 @@ $(document).on("submit", "#login", function (event) {
                 window.location.href = "korisnik.html";
                 return;
 
-            window.location.href = "homePage.html";
+            window.location.href = "korisnik.html";
         },
         error: function () {                                        // ova f-ja se izvršava posle neuspešnog zahteva
             alert("Greška prilikom Logovanja!");
