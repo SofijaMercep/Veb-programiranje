@@ -2,9 +2,75 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="css/prijavljivanje.css">
 </head>
 <body>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: lightblue;
+    background-size: cover;
+
+}
+
+.logovanje-form{
+  position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 16px 32px;
+}
+
+.logovanje-form h1 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0px 0px 0px;
+    color:#fff;
+
+}
+
+
+.logovanje-form p{
+    font-size: 15px;
+    margin: 5px 0;
+
+}
+
+
+.logovanje-form input {
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.logovanje-form button {
+    font-size: 18px;
+    font-weight: bold;
+    margin:20px 0px 0px 80px;
+    padding: 10px 15px;
+    width: 160px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #130a48;
+    color: #fff;
+
+}
+
+</style>
+<div class = "logovanje-form" id = "logovanje">
 <h1>Prijavljivanje</h1>
 <form id="form" th:action="@{/prijavljivanje}" th:object="${korisnik}" method="post">
     <p>Korisnicko ime: </p>
